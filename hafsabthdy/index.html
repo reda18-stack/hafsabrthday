@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafsa Birthday</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>From Red4 to Hafsa</h1>
+
+      <div class="form-group">
+        <label for="name">Enter Recipient's Name:</label>
+        <input type="text" id="name" placeholder="Type a name..." required />
+      </div>
+
+      <div class="form-group">
+        <label for="theme">Select Theme:</label>
+        <select id="theme">
+          <option value="birthday">🎂 Birthday</option>
+          <option value="congratulations">🎉 Congratulations</option>
+          <option value="love">❤️ Love</option>
+          <option value="friendship">🤗 Friendship</option>
+        </select>
+      </div>
+
+      <div class="buttons-container">
+        <button id="generateCard" class="btn generate-btn">Generate Card</button>
+        <a href="https://www.example.com" target="_blank" class="btn link-btn">Visit Special Page</a>
+      </div>
+
+      <div id="card" class="card">
+        <div class="theme-icon" id="cardIcon"></div>
+        <h2 id="cardTitle"></h2>
+        <p id="cardMessage"></p>
+        <div class="card-footer">Made with <span class="heart">❤️</span> by Red4</div>
+        <div class="card-actions">
+          <button id="shareCard">Share</button>
+          <button id="newCard" class="secondary-btn">New Card</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
