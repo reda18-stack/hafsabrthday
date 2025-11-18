@@ -22,7 +22,7 @@ document.getElementById("generateCard").addEventListener("click", function () {
       icon: "🏆"
     },
     love: {
-      message: `To my dear ${name}, lah ynjjik mn hadi hhhhhhhhhhh. You mean the world to me! ❤️`,
+      message: `KHTY ${name}, lah ynjjik mn hadi hhhhhhhhhhh`,
       icon: "❤️"
     },
     friendship: {
