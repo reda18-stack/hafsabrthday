@@ -7,8 +7,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Floating socks emojis -->
+    <div class="socks-emojis-container"></div>
+
+    <!-- SIMPLE AUDIO ELEMENT -->
+    <audio id="socksAudio">
+      <source src="audio/t9ach" type="audio/mpeg">
+    </audio>
+
     <div class="container">
-      <h1>From Red4 to Hafsa</h1>
+      <div class="socks-header">
+        <span class="touch-sock">🧦</span>
+        <h1>From Red4 to Hafsa</h1>
+        <span class="touch-sock">🧦</span>
+      </div>
 
       <div class="form-group">
         <label for="name">Enter Recipient's Name:</label>
@@ -26,18 +38,24 @@
       </div>
 
       <div class="buttons-container">
-        <button id="generateCard" class="btn generate-btn">Generate Card</button>
-        <a href="https://reda18-stack.github.io/hfsmusc/" target="_blank" class="btn link-btn">Visit Special Page</a>
+        <button id="generateCard" class="btn generate-btn">
+          🧦 Generate Card
+        </button>
+        <a href="https://reda18-stack.github.io/hfsmusc/" target="_blank" class="btn link-btn">
+          🔗 Visit Special Page
+        </a>
       </div>
 
       <div id="card" class="card">
         <div class="theme-icon" id="cardIcon"></div>
         <h2 id="cardTitle"></h2>
         <p id="cardMessage"></p>
-        <div class="card-footer">Made with <span class="heart">❤️</span> by Red4</div>
+        <div class="card-footer">
+          Made with <span class="heart">❤️</span> by Red4 🧦
+        </div>
         <div class="card-actions">
-          <button id="shareCard">Share</button>
-          <button id="newCard" class="secondary-btn">New Card</button>
+          <button id="shareCard">📤 Share</button>
+          <button id="newCard" class="secondary-btn">🔄 New Card</button>
         </div>
       </div>
     </div>
