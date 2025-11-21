@@ -14,6 +14,57 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Socks emojis styling */
+.socks-emojis-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.socks-emoji {
+  position: absolute;
+  font-size: 28px;
+  opacity: 0.8;
+  animation: float 8s ease-in-out infinite;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg) scale(1); 
+  }
+  25% { 
+    transform: translateY(-15px) rotate(-5deg) scale(1.1); 
+  }
+  50% { 
+    transform: translateY(-25px) rotate(5deg) scale(1.05); 
+  }
+  75% { 
+    transform: translateY(-15px) rotate(-3deg) scale(1.1); 
+  }
+}
+
+.socks-emoji:nth-child(2n) {
+  animation-delay: -1s;
+  animation-duration: 9s;
+}
+
+.socks-emoji:nth-child(3n) {
+  animation-delay: -2s;
+  animation-duration: 11s;
+}
+
+.socks-emoji:nth-child(4n) {
+  animation-delay: -3s;
+  animation-duration: 7s;
 }
 
 .container {
@@ -24,6 +75,8 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .container:hover {
@@ -48,6 +101,28 @@ h1::after {
   height: 3px;
   background: linear-gradient(to right, #ff4081, #d81b60);
   border-radius: 3px;
+}
+
+.socks-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.socks-header span {
+  font-size: 32px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { 
+    transform: translateY(0) scale(1); 
+  }
+  50% { 
+    transform: translateY(-10px) scale(1.2); 
+  }
 }
 
 .form-group {
@@ -100,6 +175,7 @@ input:focus, select:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
 }
 
 .btn::before {
@@ -214,11 +290,19 @@ input:focus, select:focus {
 
 .confetti {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #f00;
-  opacity: 0.7;
-  animation: confetti-fall 5s linear forwards;
+  width: 12px;
+  height: 12px;
+  background-color: #ff4081;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: confetti-fall 4s linear forwards;
+}
+
+.socks-confetti {
+  position: absolute;
+  font-size: 20px;
+  opacity: 0.9;
+  animation: socks-fall 5s linear forwards;
 }
 
 @keyframes confetti-fall {
@@ -228,6 +312,20 @@ input:focus, select:focus {
   }
   100% {
     transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes socks-fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg) scale(1);
     opacity: 0;
   }
 }
@@ -242,6 +340,10 @@ input:focus, select:focus {
   flex: 1;
   padding: 10px;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .secondary-btn {
@@ -268,5 +370,13 @@ input:focus, select:focus {
   
   .card p {
     font-size: 16px;
+  }
+  
+  .socks-header span {
+    font-size: 24px;
+  }
+  
+  .socks-emoji {
+    font-size: 22px;
   }
 }
